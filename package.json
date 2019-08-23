@@ -1,0 +1,31 @@
+{
+  "name": "vuepress-theme-default-prefers-color-scheme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "add prefers-color-scheme for vuepress default theme",
+  "author": "tolking <qw13131wang@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/tolking/vuepress-theme-default-prefers-color-scheme",
+  "bugs": {
+    "url": "https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/issues"
+  },
+  "homepage": "https://github.com/tolking/vuepress-theme-default-prefers-color-scheme",
+  "doc": "https://ououe.com/lib/vuepress-theme-default-prefers-color-scheme.html",
+  "scripts": {
+    "dev": "vuepress dev examples",
+    "serve": "vuepress dev examples",
+    "build": "vuepress build examples"
+  },
+  "keywords": [
+    "vue",
+    "vuepress",
+    "documentation",
+    "prefers-color-scheme",
+    "default-theme",
+    "light-theme",
+    "dark-theme"
+  ],
+  "devDependencies": {
+    "vuepress": "^1.0.0"
+  }
+}
