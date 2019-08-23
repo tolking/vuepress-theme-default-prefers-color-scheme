@@ -10,6 +10,12 @@
 
 ---
 
+![light.jpg](https://tolking.github.io/vuepress-theme-default-prefers-color-scheme/img/light.jpg)
+
+![dark.jpg](https://tolking.github.io/vuepress-theme-default-prefers-color-scheme/img/dark.jpg)
+
+---
+
 ## Installation
 
 ``` sh
