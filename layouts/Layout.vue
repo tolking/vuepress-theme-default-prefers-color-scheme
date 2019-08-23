@@ -13,5 +13,5 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/styles.styl'
+@require '../styles/index.styl'
 </style>
