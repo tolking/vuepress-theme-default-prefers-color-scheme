@@ -5,7 +5,7 @@ tagline: add prefers-color-scheme for vuepress default theme
 actionText: Get Started →
 actionLink: /started
 features:
-- title: Inheritance on the default theme
+- title: Inheritance default theme
   details: Seamlessly add prefers-color-scheme to the default theme
 - title: Enhanced display
   details: Works only on supported operating systems and browsers
