@@ -4,9 +4,7 @@
 
 [README](README.md) | [CHANGELOG](CHANGELOG.md)
 
-**This theme for Vuepress 1.x, Works only on supported operating systems and browsers**
-
-[prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+**This theme for Vuepress 1.x**
 
 [Live Demo and Documentation](https://tolking.github.io/vuepress-theme-default-prefers-color-scheme)
 

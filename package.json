@@ -10,7 +10,7 @@
     "url": "https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/issues"
   },
   "homepage": "https://github.com/tolking/vuepress-theme-default-prefers-color-scheme",
-  "doc": "https://ououe.com/lib/vuepress-theme-default-prefers-color-scheme.html",
+  "doc": "https://tolking.github.io/vuepress-theme-default-prefers-color-scheme",
   "scripts": {
     "dev": "vuepress dev examples",
     "serve": "vuepress dev examples",
@@ -25,8 +25,10 @@
     "light-theme",
     "dark-theme"
   ],
+  "dependencies": {
+    "css-prefers-color-scheme": "^3.1.1"
+  },
   "devDependencies": {
-    "css-prefers-color-scheme": "^3.1.1",
     "vuepress": "^1.0.0"
   }
 }
