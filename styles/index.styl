@@ -16,7 +16,9 @@
   --languageTextColor $languageTextColor
   --lineNumbersColor $lineNumbersColor
   --tipBgColor $tipBgColor
+  --warningColor $warningColor
   --warningBgColor $warningBgColor
+  --dangerColor $dangerColor
   --dangerBgColor $dangerBgColor
   --miniCodeBgColor $miniCodeBgColor
   --searchBorderColor $searchBorderColor
@@ -155,14 +157,18 @@ div[class*="language-"].line-numbers-mode .line-numbers-wrapper
 
 .custom-block.warning
   background-color var(--warningBgColor)
+  color var(--textColor)
+  a
+    color var(--warningColor)
 
 .custom-block.danger
   background-color var(--dangerBgColor)
+  a
+    color var(--dangerColor)
 
 .custom-block.warning,
 .custom-block.danger
-  a
-    color var(--textColor)
+  color var(--textColor)
 
 
 // search
