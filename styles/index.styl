@@ -49,7 +49,9 @@
     --tableBorderColor $tableBorderDarkColor
     --tableStripeBgColor $tableStripeBgDarkColor
     --tipBgColor $tipBgDarkColor
+    --warningColor $warningDarkColor
     --warningBgColor $warningBgDarkColor
+    --dangerColor $dangerDarkColor
     --dangerBgColor $dangerBgDarkColor
     --miniCodeBgColor $miniCodeBgDarkColor
     --searchBorderColor $searchBorderDarkColor
@@ -141,9 +143,12 @@ div[class*="language-"].line-numbers-mode::after
       color var(--preTextColor)
 
 div[class*="language-"] .highlight-lines .highlighted,
-div[class*="language-"].line-numbers-mode .highlight-lines .highlighted::before,
-div[class*="language-"].line-numbers-mode::after
+div[class*="language-"].line-numbers-mode .highlight-lines .highlighted::before
   background-color var(--highlightedBgColor)
+
+div[class*="language-"].line-numbers-mode::after
+  background-color var(--codeBgColor)
+  border-right-color var(--highlightedBgColor)
 
 div[class*="language-"]::before
   color var(--languageTextColor)
@@ -157,7 +162,6 @@ div[class*="language-"].line-numbers-mode .line-numbers-wrapper
 
 .custom-block.warning
   background-color var(--warningBgColor)
-  color var(--textColor)
   a
     color var(--warningColor)
 
@@ -170,156 +174,24 @@ div[class*="language-"].line-numbers-mode .line-numbers-wrapper
 .custom-block.danger
   color var(--textColor)
 
-
-// search
-.search-box
-  input
-    color var(--lighten25TextColor)
-    border-color var(--darken10BorderColor)
-    background-color var(--bgColor)
-    &:focus
-      border-color var(--accentColor)
-  .suggestions
+// pwa
+.global-ui
+  .sw-update-popup
+    border-color var(--accentColors)
     background var(--bgColor)
-    border-color var(--darken10BorderColor)
-  .suggestion
-    a
-      color var(--lighten35TextColor)
-    &.focused
-      background-color var(--darken10BgColor)
-      a
-        color var(--accentColor)
-
-
-.algolia-search-wrapper
-  .algolia-autocomplete
-    .ds-dropdown-menu
-      background var(--bgColor)
-      border-color var(--searchBorderColor)
-      &::before
-        border-color var(--searchBorderColor)
-      .ds-suggestion
-        border-bottom-color var(--borderColor)
-    // .algolia-docsearch-suggestion--highlight
-    //   color #2c815b
-    .algolia-docsearch-suggestion
-      border-color var(--borderColor)
-      .algolia-docsearch-suggestion--category-header
-        background var(--accentColor)
-        // color #fff
-        // .algolia-docsearch-suggestion--highlight
-        //   background rgba(255, 255, 255, 0.6)
-      .algolia-docsearch-suggestion--title
-        color var(--textColor)
-      .algolia-docsearch-suggestion--subcategory-column
-        border-color var(--borderColor)
-        // background #f1f3f5
-      // .algolia-docsearch-suggestion--subcategory-column-text
-      //   color #555
-    .algolia-docsearch-footer
-      border-color var(--borderColor)
-    .ds-cursor .algolia-docsearch-suggestion--content
-      // background-color #e7edf3 !important
-      color var(--textColor)
-
-.dropdown-wrapper
-  .nav-dropdown
-    .dropdown-item
-      h4
-        border-top-color var(--kbdBgColor)
-      a
-        &:hover
-          color var(--accentColor)
-        &.router-link-active
-          color var(--accentColor)
-          &::after
-            border-left-color var(--accentColor)
-
-@media (min-width: $MQMobile)
-  .dropdown-wrapper .dropdown-title .arrow
-    border-top-color var(--arrowBgColor)
-
-  .dropdown-wrapper .nav-dropdown
-    background-color var(--bgColor)
-    // border-color #ddd
-    // border-bottom-color #ccc
-
-
-// home
-.home
-  .hero
-    .description
-      color var(--lighten40TextColor)
-    .action-button
-      // color #fff
+    button
+      color #fff
       background-color var(--accentColor)
       border-bottom-color var(--darken10AccentColor)
       &:hover
         background-color var(--lighten10AccentColor)
-  .features
-    border-top-color var(--borderColor)
-  .feature
-    h2
-      color var(--lighten10TextColor)
-    p
-      color var(--lighten25TextColor)
-  .footer
-    border-top-color var(--borderColor)
-    color var(--lighten25TextColor)
-
-
-// navbar
-.navbar .site-name
-  color var(--textColor)
-
-.navbar .links
-  background var(--bgColor)
-
-.nav-links a
-  &:hover, &.router-link-active
-    color var(--accentColor)
-    @media (min-width: $MQMobile)
-      color var(--textColor)
-
-@media (min-width: $MQMobile)
-  .nav-item > a:not(.external)
-    &:hover, &.router-link-active
-      border-bottom-color var(--accentColor)
-
-// page
-.page-edit .edit-link a,
-.page-edit .last-updated .prefix
-  color var(--lighten25TextColor)
-
-// sidebar
-.sidebar-heading
-  color var(--textColor)
-  &.clickable
-    &.active
-      color var(--accentColor)
-      border-left-color var(--accentColor)
-    &:hover
-      color var(--accentColor)
-
-a.sidebar-link
-  color var(--textColor)
-  &:hover
-    color var(--accentColor)
-  &.active
-    color var(--accentColor)
-    border-left-color var(--accentColor)
-
-// pwa
-.sw-update-popup
-  border-color var(--accentColors)
-  background var(--bgColor)
 
 // scroll bar
-::-webkit-scrollbar
-  width 10px
+@media (min-width: $MQMobile)
+  ::-webkit-scrollbar
+    max-width 6px
+    max-height 12px
 
-::-webkit-scrollbar-thumb
-  background-color var(--languageTextColor)
-
-::-webkit-scrollbar-track
-  background-color var(--miniCodeBgColor)
+  ::-webkit-scrollbar-thumb
+    background-color var(--languageTextColor)
+    border-radius 6px

@@ -58,5 +58,5 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/index.styl'
+@require '../styles/components.styl'
 </style>
