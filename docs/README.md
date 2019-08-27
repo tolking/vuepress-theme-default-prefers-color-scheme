@@ -1,20 +1,22 @@
-# vuepress-theme-default-prefers-color-scheme
+## Introduction
 
-> add prefers-color-scheme for vuepress default theme
+vuepress-theme-default-prefers-color-scheme is a theme that adds `light` and `dark` themes to the [default theme](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html) of vuepress
 
-[README](README.md) | [CHANGELOG](CHANGELOG.md)
+## How It Works
 
-**This theme for Vuepress 1.x**
+base on [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) and [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 
-[Live Demo and Documentation](https://tolking.github.io/vuepress-theme-default-prefers-color-scheme)
+#### View Support Browsers
 
----
+- [prefers-color-scheme](https://www.caniuse.com/#search=prefers-color-scheme)
+- [CSS Variables](https://www.caniuse.com/#search=CSS%20Variables)
 
-![light.jpg](./docs/.vuepress/public/img/light.jpg)
+**`prefers-color-scheme` also needs your system support**
 
-![light.jpg](./docs/.vuepress/public/img/dark.jpg)
+- mac Mojave ^10.14
+- windows 10 ^1809
 
----
+**For unsupported browsers, the same style as the default theme will be displayed**
 
 ## Installation
 
@@ -26,7 +28,7 @@ npm i vuepress-theme-default-prefers-color-scheme
 
 ## Usage
 
-``` js
+``` js {3}
 // .vuepress -> config.js
 module.exports = {
   theme: 'default-prefers-color-scheme',
@@ -43,11 +45,13 @@ module.exports = {
 - Default: `undefined`
 - Required: `false`
 
-By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), You can change it by `defaultTheme`
+::: tip
+By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), You can change it by `defaultTheme`. base on [css-prefers-color-scheme](https://github.com/csstools/css-prefers-color-scheme)
+:::
 
 support `light`, `dark` or `{ theme: [begin hours, end hours] }`
 
-``` js
+``` js {4,6,8}
 module.exports = {
   theme: 'default-prefers-color-scheme',
   themeConfig: {
@@ -74,11 +78,3 @@ module.exports = {
 To apply simple color overrides to the styling of the [default preset](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/styles/palette.styl), In your `.vuepress/styles/palette.styl` file.
 
 **`$accentColor` and `$accentDarkColor` are best changed together**
-
-## License
-
-[MIT](http://opensource.org/licenses/MIT)
-
-## Keywords
-
-vue vuepress documentation prefers-color-scheme default-theme light-theme dark-theme
