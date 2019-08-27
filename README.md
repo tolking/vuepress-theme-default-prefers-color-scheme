@@ -10,9 +10,9 @@
 
 ---
 
-![light.jpg](./examples/public/img/light.jpg)
+![light.jpg](./docs/.vuepress/public/img/light.jpg)
 
-![light.jpg](./examples/public/img/dark.jpg)
+![light.jpg](./docs/.vuepress/public/img/dark.jpg)
 
 ---
 

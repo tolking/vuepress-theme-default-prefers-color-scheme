@@ -1,3 +1,23 @@
+## Introduction
+
+vuepress-theme-default-prefers-color-scheme is a theme that adds `light` and `dark` themes to the [default theme](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html) of vuepress
+
+## How It Works
+
+base on [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) and [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+
+#### View Support Browsers
+
+- [prefers-color-scheme](https://www.caniuse.com/#search=prefers-color-scheme)
+- [CSS Variables](https://www.caniuse.com/#search=CSS%20Variables)
+
+**`prefers-color-scheme` also needs your system support**
+
+- mac Mojave ^10.14
+- windows 10 ^1809
+
+**For unsupported browsers, the same style as the default theme will be displayed**
+
 ## Installation
 
 ``` sh
@@ -26,7 +46,7 @@ module.exports = {
 - Required: `false`
 
 ::: tip
-By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), You can change it by `defaultTheme`
+By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), You can change it by `defaultTheme`. base on [css-prefers-color-scheme](https://github.com/csstools/css-prefers-color-scheme)
 :::
 
 support `light`, `dark` or `{ theme: [begin hours, end hours] }`
