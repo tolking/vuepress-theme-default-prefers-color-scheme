@@ -23,7 +23,7 @@ module.exports = {
   themeConfig: {
     defaultTheme: { dark: [19, 6] },
     repo: 'tolking/vuepress-theme-default-prefers-color-scheme',
-    docsDir: 'examples',
+    docsDir: 'docs',
     editLinks: true,
     locales: {
       '/': {
