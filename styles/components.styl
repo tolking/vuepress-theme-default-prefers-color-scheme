@@ -49,6 +49,8 @@
       color var(--textColor)
 
 .dropdown-wrapper
+  .dropdown-title
+    color var(--textColor)
   .nav-dropdown
     .dropdown-item
       h4
@@ -60,6 +62,10 @@
           color var(--accentColor)
           &::after
             border-left-color var(--accentColor)
+
+@media (max-width: $MQMobile)
+  .dropdown-wrapper .dropdown-title:hover
+    color var(--accentColor)
 
 @media (min-width: $MQMobile)
   .dropdown-wrapper .dropdown-title .arrow
