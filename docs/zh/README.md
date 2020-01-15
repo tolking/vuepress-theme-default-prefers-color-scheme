@@ -41,9 +41,8 @@ module.exports = {
 ## 配置
 
 ### defaultTheme
-- Type: `string`, `object`
-- Default: `undefined`
-- Required: `false`
+- 类型: `string`, `object`
+- 可省略
 
 ::: tip
 默认情况下，要显示浅色或深色主题由 [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) 决定, 你可以通过设置 `defaultTheme` 来指定显示的主题颜色。基于 [css-prefers-color-scheme](https://github.com/csstools/css-prefers-color-scheme)
