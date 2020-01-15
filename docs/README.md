@@ -42,7 +42,6 @@ module.exports = {
 
 ### defaultTheme
 - Type: `string`, `object`
-- Default: `undefined`
 - Required: `false`
 
 ::: tip

@@ -12,7 +12,7 @@
 
 ![light.jpg](./docs/.vuepress/public/img/light.jpg)
 
-![light.jpg](./docs/.vuepress/public/img/dark.jpg)
+![dark.jpg](./docs/.vuepress/public/img/dark.jpg)
 
 ---
 
@@ -40,7 +40,6 @@ module.exports = {
 
 ### defaultTheme
 - Type: `string`, `object`
-- Default: `undefined`
 - Required: `false`
 
 By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), You can change it by `defaultTheme`
