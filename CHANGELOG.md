@@ -2,6 +2,10 @@
 
 [README](README.md) | [CHANGELOG](CHANGELOG.md)
 
+## 1.0.6
+
+- fix styles on pwa
+
 ## 1.0.5
 
 - fix styles on vuepress 1.3.0
