@@ -178,14 +178,15 @@ div[class*="language-"].line-numbers-mode .line-numbers-wrapper
 // pwa
 .global-ui
   .sw-update-popup
-    border-color var(--accentColors)
-    background var(--bgColor)
+    border-color var(--accentColors) !important
+    background-color var(--bgColor) !important
+    color var(--textColor) !important
     button
-      color #fff
-      background-color var(--accentColor)
-      border-bottom-color var(--darken10AccentColor)
+      border-color var(--darken10AccentColor) !important
+      background-color var(--accentColor) !important
+      color #fff !important
       &:hover
-        background-color var(--lighten10AccentColor)
+        background-color var(--lighten10AccentColor) !important
 
 // scroll bar
 @media (min-width: $MQMobile)
