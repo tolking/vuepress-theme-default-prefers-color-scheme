@@ -57,11 +57,11 @@ module.exports = {
         ]
       }
     }
-  },
-  postcss: {
-    plugins: [
-      require('css-prefers-color-scheme/postcss'),
-      require('autoprefixer')
-    ]
   }
+  // postcss: {
+  //   plugins: [
+  //     require('css-prefers-color-scheme/postcss'),
+  //     require('autoprefixer')
+  //   ]
+  // }
 }
