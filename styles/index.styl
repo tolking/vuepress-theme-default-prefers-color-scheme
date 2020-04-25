@@ -31,6 +31,7 @@
   --darken10AccentColor darken($accentColor, 10%)
   --darken10BgColor darken($bgColor, 5%)
   --darken10BorderColor darken($borderColor, 10%)
+
   @media (prefers-color-scheme: light)
     --codeBgColor $codeBgLightColor
     --preTextColor $preTextLightColor
@@ -38,6 +39,7 @@
     --languageTextColor $languageTextLightColor
     --lineNumbersColor $lineNumbersLightColor
     --lighten20TextColor lighten($textColor, 20%)
+
   @media (prefers-color-scheme: dark)
     --accentColor $accentDarkColor
     --textColor $textDarkColor
@@ -65,26 +67,24 @@
     --darken10BgColor lighten($bgDarkColor, 5%)
     --darken10BorderColor darken($borderDarkColor, 10%)
 
-
-html,
-body,
-.navbar,
+html
+body
+.navbar
 .sidebar
   background-color var(--bgColor)
 
-body {
+body
   color var(--textColor)
-}
 
-.navbar,
-h2,
+.navbar
+h2
 .sidebar .nav-links
   border-bottom-color var(--borderColor)
 
 .sidebar
   border-right-color var(--borderColor)
 
-{$contentClass}:not(.custom) p.demo,
+{$contentClass}:not(.custom) p.demo
 kbd
   border-color var(--borderColor)
 
@@ -95,20 +95,21 @@ blockquote
   color var(--blockquoteTextColor)
   border-left-color var(--blockquoteBorderColor)
 
-a,
+a
 p a code
- color var(--accentColor)
+  color var(--accentColor)
 
-hr,
+hr
 .page-nav .inner
   border-top-color var(--borderColor) !important
 
 tr
   border-top-color var(--tableBorderColor)
+
   &:nth-child(2n)
     background-color var(--tableStripeBgColor)
 
-th,
+th
 td
   border-color var(--tableBorderColor)
 
@@ -118,9 +119,8 @@ td
 .arrow.down
   border-top-color var(--arrowBgColor)
 
-.arrow.right,
-  border-left-color var(--arrowBgColor)
-
+.arrow.right
+border-left-color var(--arrowBgColor)
 .arrow.left
   border-right-color var(--arrowBgColor)
 
@@ -128,32 +128,35 @@ td
 {$contentClass} code
   color var(--lighten20TextColor)
   background-color var(--miniCodeBgColor)
+
   .token.inserted
     color var(--accentColor)
 
-{$contentClass} pre,
-{$contentClass} pre[class*="language-"],
-div[class*="language-"],
-div[class*="language-"].line-numbers-mode::after
+{$contentClass} pre
+
+{$contentClass} pre[class*='language-']
+div[class*='language-']
+div[class*='language-'].line-numbers-mode::after
   background-color var(--codeBgColor)
 
 {$contentClass}
-  pre, pre[class*="language-"]
+  pre
+  pre[class*='language-']
     code
       color var(--preTextColor)
 
-div[class*="language-"] .highlight-lines .highlighted,
-div[class*="language-"].line-numbers-mode .highlight-lines .highlighted::before
+div[class*='language-'] .highlight-lines .highlighted
+div[class*='language-'].line-numbers-mode .highlight-lines .highlighted::before
   background-color var(--highlightedBgColor)
 
-div[class*="language-"].line-numbers-mode::after
+div[class*='language-'].line-numbers-mode::after
   background-color var(--codeBgColor)
   border-right-color var(--highlightedBgColor)
 
-div[class*="language-"]::before
+div[class*='language-']::before
   color var(--languageTextColor)
 
-div[class*="language-"].line-numbers-mode .line-numbers-wrapper
+div[class*='language-'].line-numbers-mode .line-numbers-wrapper
   color var(--lineNumbersColor)
 
 // custom-block
@@ -163,15 +166,17 @@ div[class*="language-"].line-numbers-mode .line-numbers-wrapper
 
 .custom-block.warning
   background-color var(--warningBgColor)
+
   a
     color var(--warningColor)
 
 .custom-block.danger
   background-color var(--dangerBgColor)
+
   a
     color var(--dangerColor)
 
-.custom-block.warning,
+.custom-block.warning
 .custom-block.danger
   color var(--textColor)
 
@@ -181,10 +186,12 @@ div[class*="language-"].line-numbers-mode .line-numbers-wrapper
     border-color var(--accentColors) !important
     background-color var(--bgColor) !important
     color var(--textColor) !important
+
     button
       border-color var(--darken10AccentColor) !important
       background-color var(--accentColor) !important
       color #fff !important
+
       &:hover
         background-color var(--lighten10AccentColor) !important
 

@@ -2,6 +2,11 @@
 
 [README](README.md) | [CHANGELOG](CHANGELOG.md)
 
+## 1.0.7
+
+- uniform code style
+- fix typo
+
 ## 1.0.6
 
 - fix styles on pwa
