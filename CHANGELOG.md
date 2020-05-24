@@ -2,6 +2,10 @@
 
 [README](README.md) | [CHANGELOG](CHANGELOG.md)
 
+## 1.0.8
+
+- add variables
+
 ## 1.0.7
 
 - uniform code style
