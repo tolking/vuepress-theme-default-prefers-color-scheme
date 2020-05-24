@@ -5,6 +5,10 @@
   --textColor $textColor
   --borderColor $borderColor
   --codeBgColor $codeBgColor
+  --arrowBgColor $arrowBgColor
+  --badgeTipColor $badgeTipColor
+  --badgeWarningColor $badgeWarningColor
+  --badgeErrorColor $badgeErrorColor
   --bgColor $bgColor
   --kbdBgColor $kbdBgColor
   --blockquoteTextColor $blockquoteTextColor
@@ -32,7 +36,7 @@
   --darken10BgColor darken($bgColor, 5%)
   --darken10BorderColor darken($borderColor, 10%)
 
-  @media (prefers-color-scheme: light)
+  @media (prefers-color-scheme light)
     --codeBgColor $codeBgLightColor
     --preTextColor $preTextLightColor
     --highlightedBgColor $highlightedBgLightColor
@@ -40,10 +44,14 @@
     --lineNumbersColor $lineNumbersLightColor
     --lighten20TextColor lighten($textColor, 20%)
 
-  @media (prefers-color-scheme: dark)
+  @media (prefers-color-scheme dark)
     --accentColor $accentDarkColor
     --textColor $textDarkColor
     --borderColor $borderDarkColor
+    --arrowBgColor $arrowBgDarkColor
+    --badgeTipColor $badgeTipDarkColor
+    --badgeWarningColor $badgeWarningDarkColor
+    --badgeErrorColor $badgeErrorDarkColor
     --bgColor $bgDarkColor
     --kbdBgColor $kbdBgDarkColor
     --blockquoteTextColor $blockquoteTextDarkColor
@@ -161,16 +169,18 @@ div[class*='language-'].line-numbers-mode .line-numbers-wrapper
 
 // custom-block
 .custom-block.tip
-.custom-block.details
+  border-color var(--badgeTipColor)
   background-color var(--tipBgColor)
 
 .custom-block.warning
+  border-color var(--badgeWarningColor)
   background-color var(--warningBgColor)
 
   a
     color var(--warningColor)
 
 .custom-block.danger
+  border-color var(--badgeErrorColor)
   background-color var(--dangerBgColor)
 
   a
@@ -179,6 +189,25 @@ div[class*='language-'].line-numbers-mode .line-numbers-wrapper
 .custom-block.warning
 .custom-block.danger
   color var(--textColor)
+
+.custom-block.details
+  background-color var(--tipBgColor)
+
+// badge
+.badge
+  background-color var(--badgeTipColor) !important
+
+  &.tip
+  &.green
+    background-color var(--badgeTipColor) !important
+
+  &.error
+    background-color var(--badgeErrorColor) !important
+
+  &.warning
+  &.warn
+  &.yellow
+    background-color var(--badgeWarningColor) !important
 
 // pwa
 .global-ui
@@ -196,7 +225,7 @@ div[class*='language-'].line-numbers-mode .line-numbers-wrapper
         background-color var(--lighten10AccentColor) !important
 
 // scroll bar
-@media (min-width: $MQMobile)
+@media (min-width $MQMobile)
   ::-webkit-scrollbar
     max-width 6px
     max-height 12px
