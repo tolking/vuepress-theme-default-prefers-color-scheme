@@ -19,6 +19,7 @@
   --highlightedBgColor $highlightedBgColor
   --languageTextColor $languageTextColor
   --lineNumbersColor $lineNumbersColor
+  --tipColor $tipColor
   --tipBgColor $tipBgColor
   --warningColor $warningColor
   --warningBgColor $warningBgColor
@@ -58,6 +59,7 @@
     --blockquoteBorderColor $blockquoteBorderDarkColor
     --tableBorderColor $tableBorderDarkColor
     --tableStripeBgColor $tableStripeBgDarkColor
+    --tipColor $tipDarkColor
     --tipBgColor $tipBgDarkColor
     --warningColor $warningDarkColor
     --warningBgColor $warningBgDarkColor
@@ -65,7 +67,7 @@
     --dangerBgColor $dangerBgDarkColor
     --miniCodeBgColor $miniCodeBgDarkColor
     --searchBorderColor $searchBorderDarkColor
-    --lightenAccentColor lighten($accentDarkColor, 10%)
+    --lighten10AccentColor lighten($accentDarkColor, 10%)
     --lighten10TextColor lighten($textDarkColor, 10%)
     --lighten20TextColor lighten($textDarkColor, 20%)
     --lighten25TextColor lighten($textDarkColor, 25%)
@@ -172,10 +174,15 @@ div[class*='language-'].line-numbers-mode .line-numbers-wrapper
   border-color var(--badgeTipColor)
   background-color var(--tipBgColor)
 
+  .custom-block-title
+  a
+    color var(--tipColor)
+
 .custom-block.warning
   border-color var(--badgeWarningColor)
   background-color var(--warningBgColor)
 
+  .custom-block-title
   a
     color var(--warningColor)
 
@@ -183,6 +190,7 @@ div[class*='language-'].line-numbers-mode .line-numbers-wrapper
   border-color var(--badgeErrorColor)
   background-color var(--dangerBgColor)
 
+  .custom-block-title
   a
     color var(--dangerColor)
 
