@@ -43,7 +43,6 @@
     --highlightedBgColor $highlightedBgLightColor
     --languageTextColor $languageTextLightColor
     --lineNumbersColor $lineNumbersLightColor
-    --lighten20TextColor lighten($textColor, 20%)
 
   @media (prefers-color-scheme dark)
     --accentColor $accentDarkColor
@@ -76,6 +75,80 @@
     --darken10AccentColor darken($accentDarkColor, 10%)
     --darken10BgColor lighten($bgDarkColor, 5%)
     --darken10BorderColor darken($borderDarkColor, 10%)
+
+html[theme='light']
+  --accentColor $accentColor
+  --textColor $textColor
+  --borderColor $borderColor
+  --codeBgColor $codeBgLightColor
+  --arrowBgColor $arrowBgColor
+  --badgeTipColor $badgeTipColor
+  --badgeWarningColor $badgeWarningColor
+  --badgeErrorColor $badgeErrorColor
+  --bgColor $bgColor
+  --kbdBgColor $kbdBgColor
+  --blockquoteTextColor $blockquoteTextColor
+  --blockquoteBorderColor $blockquoteBorderColor
+  --tableBorderColor $tableBorderColor
+  --tableStripeBgColor $tableStripeBgColor
+  --preTextColor $preTextLightColor
+  --highlightedBgColor $highlightedBgLightColor
+  --languageTextColor $languageTextLightColor
+  --lineNumbersColor $lineNumbersLightColor
+  --tipColor $tipColor
+  --tipBgColor $tipBgColor
+  --warningColor $warningColor
+  --warningBgColor $warningBgColor
+  --dangerColor $dangerColor
+  --dangerBgColor $dangerBgColor
+  --miniCodeBgColor $miniCodeBgColor
+  --searchBorderColor $searchBorderColor
+  --lighten10AccentColor lighten($accentColor, 10%)
+  --lighten10TextColor lighten($textColor, 10%)
+  --lighten20TextColor lighten($textColor, 20%)
+  --lighten25TextColor lighten($textColor, 25%)
+  --lighten35TextColor lighten($textColor, 35%)
+  --lighten40TextColor lighten($textColor, 40%)
+  --darken10AccentColor darken($accentColor, 10%)
+  --darken10BgColor darken($bgColor, 5%)
+  --darken10BorderColor darken($borderColor, 10%)
+
+html[theme='dark']
+  --accentColor $accentDarkColor
+  --textColor $textDarkColor
+  --borderColor $borderDarkColor
+  --codeBgColor $codeBgColor
+  --arrowBgColor $arrowBgDarkColor
+  --badgeTipColor $badgeTipDarkColor
+  --badgeWarningColor $badgeWarningDarkColor
+  --badgeErrorColor $badgeErrorDarkColor
+  --bgColor $bgDarkColor
+  --kbdBgColor $kbdBgDarkColor
+  --blockquoteTextColor $blockquoteTextDarkColor
+  --blockquoteBorderColor $blockquoteBorderDarkColor
+  --tableBorderColor $tableBorderDarkColor
+  --tableStripeBgColor $tableStripeBgDarkColor
+  --preTextColor $preTextColor
+  --highlightedBgColor $highlightedBgColor
+  --languageTextColor $languageTextColor
+  --lineNumbersColor $lineNumbersColor
+  --tipColor $tipDarkColor
+  --tipBgColor $tipBgDarkColor
+  --warningColor $warningDarkColor
+  --warningBgColor $warningBgDarkColor
+  --dangerColor $dangerDarkColor
+  --dangerBgColor $dangerBgDarkColor
+  --miniCodeBgColor $miniCodeBgDarkColor
+  --searchBorderColor $searchBorderDarkColor
+  --lighten10AccentColor lighten($accentDarkColor, 10%)
+  --lighten10TextColor lighten($textDarkColor, 10%)
+  --lighten20TextColor lighten($textDarkColor, 20%)
+  --lighten25TextColor lighten($textDarkColor, 25%)
+  --lighten35TextColor lighten($textDarkColor, 35%)
+  --lighten40TextColor lighten($textDarkColor, 40%)
+  --darken10AccentColor darken($accentDarkColor, 10%)
+  --darken10BgColor darken($bgDarkColor, 5%)
+  --darken10BorderColor darken($borderDarkColor, 10%)
 
 html
 body

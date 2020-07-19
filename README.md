@@ -55,18 +55,11 @@ module.exports = {
     defaultTheme: { dark: [18, 6] },
     // or
     defaultTheme: { light: [6, 18], dark: [18, 6] },
-  },
-  // When using `light theme` or `dark theme`, you need to add a postcss plugins to your config.js
-  postcss: {
-    plugins: [
-      require('css-prefers-color-scheme/postcss'),
-      require('autoprefixer')
-    ]
   }
 }
 ```
 
-[Theme Config](https://v1.vuepress.vuejs.org/theme/default-theme-config.html)
+[Theme Config](https://vuepress.vuejs.org/theme/default-theme-config.html)
 
 ## Styling
 
@@ -77,7 +70,3 @@ To apply simple color overrides to the styling of the [default preset](https://g
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
-
-## Keywords
-
-vue vuepress documentation prefers-color-scheme default-theme light-theme dark-theme

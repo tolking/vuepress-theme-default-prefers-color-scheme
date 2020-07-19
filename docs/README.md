@@ -1,10 +1,10 @@
 ## Introduction
 
-vuepress-theme-default-prefers-color-scheme is a theme that adds `light` and `dark` themes to the [default theme](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html) of vuepress
+vuepress-theme-default-prefers-color-scheme is a theme that adds `light` and `dark` themes to the [default theme](https://vuepress.vuejs.org/zh/theme/default-theme-config.html) of vuepress
 
 ## How It Works
 
-base on [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) and [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+base on prefers-color-scheme and CSS Variables
 
 #### View Support Browsers
 
@@ -45,7 +45,7 @@ module.exports = {
 - Required: `false`
 
 ::: tip
-By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), You can change it by `defaultTheme`. base on [css-prefers-color-scheme](https://github.com/csstools/css-prefers-color-scheme)
+By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), You can change it by `defaultTheme`.
 :::
 
 support `light`, `dark` or `{ theme: [begin hours, end hours] }`
@@ -59,18 +59,11 @@ module.exports = {
     defaultTheme: { dark: [18, 6] },
     // or
     defaultTheme: { light: [6, 18], dark: [18, 6] },
-  },
-  // When using `light theme` or `dark theme`, you need to add a postcss plugins to your config.js
-  postcss: {
-    plugins: [
-      require('css-prefers-color-scheme/postcss'),
-      require('autoprefixer')
-    ]
   }
 }
 ```
 
-[Theme Config](https://v1.vuepress.vuejs.org/theme/default-theme-config.html)
+[Theme Config](https://vuepress.vuejs.org/theme/default-theme-config.html)
 
 ## Styling
 
