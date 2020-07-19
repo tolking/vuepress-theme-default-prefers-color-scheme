@@ -2,6 +2,16 @@
 
 [README](README.md) | [CHANGELOG](CHANGELOG.md)
 
+## 1.1.0
+
+- remove `css-prefers-color-scheme`
+- refactor `defaultTheme`
+
+```
+defaultTheme: 'light' -> <html theme="light">
+defaultTheme: 'dark' -> <html theme="dark">
+```
+
 ## 1.0.9
 
 - fix styles

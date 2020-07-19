@@ -9,11 +9,6 @@ export default {
   components: {
     ParentLayout
   },
-  data() {
-    return {
-      colorScheme: {}
-    }
-  },
   computed: {
     defaultTheme() {
       const _defaultTheme = this.$themeConfig.defaultTheme
@@ -42,16 +37,7 @@ export default {
   },
   beforeMount() {
     if (this.defaultTheme) {
-      const prefersColorScheme = require('css-prefers-color-scheme').default
-      this.colorScheme = prefersColorScheme(this.defaultTheme)
-    }
-  },
-  mounted() {
-    // Prevent styles in index.styl not work
-    if (this.defaultTheme) {
-      window.onload = function() {
-        this.colorScheme.scheme = this.defaultTheme
-      }.bind(this)
+      document.getElementsByTagName('html')[0].setAttribute('theme', this.defaultTheme)
     }
   }
 }
