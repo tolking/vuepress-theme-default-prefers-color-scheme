@@ -1,10 +1,10 @@
 ## 介绍
 
-vuepress-theme-default-prefers-color-scheme 是一款为 [vuepress 默认主题](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html) 增加 `浅色` 与 `深色` 主题的一款主题
+vuepress-theme-default-prefers-color-scheme 是一款为 [vuepress 默认主题](https://vuepress.vuejs.org/zh/theme/default-theme-config.html) 增加 `浅色` 与 `深色` 主题的一款主题
 
 ## 原理
 
-主要是基于下一代 css 技术中的 [prefers-color-scheme](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme) 与 [CSS Variables](https://developer.mozilla.org/zh-CN/docs/Web/CSS/--*) 实现。
+主要是基于下一代 css 技术中的 prefers-color-scheme 与 CSS Variables 实现。
 
 #### 查看支持浏览器
 
@@ -45,7 +45,7 @@ module.exports = {
 - 可省略
 
 ::: tip
-默认情况下，要显示浅色或深色主题由 [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) 决定, 你可以通过设置 `defaultTheme` 来指定显示的主题颜色。基于 [css-prefers-color-scheme](https://github.com/csstools/css-prefers-color-scheme)
+默认情况下，要显示浅色或深色主题由 [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) 决定, 你可以通过设置 `defaultTheme` 来指定显示的主题颜色
 :::
 
 支持 `light`, `dark` 或者 `{ theme: [begin hours, end hours] }`
@@ -59,18 +59,11 @@ module.exports = {
     defaultTheme: { dark: [18, 6] },
     // or
     defaultTheme: { light: [6, 18], dark: [18, 6] },
-  },
-  // 当你指定了显示主题的颜色时，你需要增加如下的 postcss 插件
-  postcss: {
-    plugins: [
-      require('css-prefers-color-scheme/postcss'),
-      require('autoprefixer')
-    ]
   }
 }
 ```
 
-其它配置与 [官方主题配置](https://v1.vuepress.vuejs.org/theme/default-theme-config.html) 相同
+其它配置与 [官方主题配置](https://vuepress.vuejs.org/theme/default-theme-config.html) 相同
 
 ## 样式
 

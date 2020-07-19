@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-default-prefers-color-scheme",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "main": "index.js",
   "description": "add prefers-color-scheme for vuepress default theme",
   "author": "tolking <qw13131wang@gmail.com>",
@@ -17,11 +17,10 @@
     "build": "vuepress build docs"
   },
   "keywords": [
-    "vue",
     "vuepress",
+    "vuepress-theme",
     "documentation",
     "prefers-color-scheme",
-    "default-theme",
     "light-theme",
     "dark-theme"
   ],
