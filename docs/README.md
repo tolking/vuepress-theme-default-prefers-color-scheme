@@ -44,8 +44,8 @@ module.exports = {
 - Type: `string`, `object`
 - Required: `false`
 
-::: tip
-By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), You can change it by `defaultTheme`.
+::: warning
+By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme). You can break it by set `defaultTheme`.
 :::
 
 support `light`, `dark` or `{ theme: [begin hours, end hours] }`
@@ -63,10 +63,26 @@ module.exports = {
 }
 ```
 
+::: danger
+After `v1.1.0`, it is no longer necessary to add a postcss plugIn to set `defaulttheme`. It is recommended to remove the relevant content. In the near future, `css-prefers-color-scheme` will be remove from `package.json`
+
+~~postcss: {~~
+
+~~plugins: [~~
+
+~~**require('css-prefers-color-scheme/postcss'),**~~
+
+~~require('autoprefixer')~~
+
+~~]~~
+
+~~}~~
+:::
+
 [Theme Config](https://vuepress.vuejs.org/theme/default-theme-config.html)
 
 ## Styling
 
-To apply simple color overrides to the styling of the [default preset](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/styles/palette.styl), In your `.vuepress/styles/palette.styl` file.
+To apply simple color overrides to the styling of the [default preset](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/styles/palette.styl), In your `.vuepress/styles/palette.styl` file. or set CSS Variables in your `.vuepress/styles/index.styl` file.
 
 **`$accentColor` and `$accentDarkColor` are best changed together**
