@@ -44,8 +44,8 @@ module.exports = {
 - 类型: `string`, `object`
 - 可省略
 
-::: tip
-默认情况下，要显示浅色或深色主题由 [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) 决定, 你可以通过设置 `defaultTheme` 来指定显示的主题颜色
+::: warning
+默认情况下，要显示浅色或深色主题由 [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) 决定。 你可以通过设置 `defaultTheme` 指定显示的主题颜色，但会破坏主题颜色的自动切换。
 :::
 
 支持 `light`, `dark` 或者 `{ theme: [begin hours, end hours] }`
@@ -63,10 +63,26 @@ module.exports = {
 }
 ```
 
+::: danger
+从 `v1.1.0` 以后设置 `defaultTheme` 不在需要增加postcss插件，建议移除相关内容。在不久的未来将会把 `package.json` 中的 `css-prefers-color-scheme` 移除
+
+~~postcss: {~~
+
+~~plugins: [~~
+
+~~**require('css-prefers-color-scheme/postcss'),**~~
+
+~~require('autoprefixer')~~
+
+~~]~~
+
+~~}~~
+:::
+
 其它配置与 [官方主题配置](https://vuepress.vuejs.org/theme/default-theme-config.html) 相同
 
 ## 样式
 
-在 `.vuepress/styles/palette.styl`  文件里你可以对 [默认预设的样式](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/styles/palette.styl) 应用简单的颜色替换
+在 `.vuepress/styles/palette.styl` 文件里你可以对 [默认预设的样式](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/styles/palette.styl) 应用简单的颜色替换，或者直接在 `.vuepress/styles/index.styl` 里面直接设置css变量
 
 **`$accentColor` 和 `$accentDarkColor` 最好被一起更改**

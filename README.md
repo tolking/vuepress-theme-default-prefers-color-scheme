@@ -10,12 +10,6 @@
 
 ---
 
-![light.jpg](./docs/.vuepress/public/img/light.jpg)
-
-![dark.jpg](./docs/.vuepress/public/img/dark.jpg)
-
----
-
 ## Installation
 
 ``` sh
@@ -42,7 +36,7 @@ module.exports = {
 - Type: `string`, `object`
 - Required: `false`
 
-By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme), You can change it by `defaultTheme`
+By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme). You can break it by set `defaultTheme`.
 
 support `light`, `dark` or `{ theme: [begin hours, end hours] }`
 
@@ -63,7 +57,7 @@ module.exports = {
 
 ## Styling
 
-To apply simple color overrides to the styling of the [default preset](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/styles/palette.styl), In your `.vuepress/styles/palette.styl` file.
+To apply simple color overrides to the styling of the [default preset](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/styles/palette.styl), In your `.vuepress/styles/palette.styl` file. or set CSS Variables in your `.vuepress/styles/index.styl` file.
 
 **`$accentColor` and `$accentDarkColor` are best changed together**
 
