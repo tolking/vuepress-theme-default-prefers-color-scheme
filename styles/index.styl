@@ -161,7 +161,6 @@ body
 
 .navbar
 h2
-.sidebar .nav-links
   border-bottom-color var(--borderColor)
 
 .sidebar
@@ -183,8 +182,7 @@ p a code
   color var(--accentColor)
 
 hr
-.page-nav .inner
-  border-top-color var(--borderColor) !important
+  border-top-color var(--borderColor)
 
 tr
   border-top-color var(--tableBorderColor)
@@ -215,6 +213,9 @@ border-left-color var(--arrowBgColor)
   .token.inserted
     color var(--accentColor)
 
+  .token.punctuation
+    color var(--preTextColor)
+
 {$contentClass} pre
 
 {$contentClass} pre[class*='language-']
@@ -241,6 +242,18 @@ div[class*='language-']::before
 
 div[class*='language-'].line-numbers-mode .line-numbers-wrapper
   color var(--lineNumbersColor)
+
+.theme-code-block > pre
+  background-color var(--codeBgColor) !important
+
+.theme-code-group .theme-code-group__nav
+  background-color var(--codeBgColor) !important
+
+  .theme-code-group__nav-tab
+    color var(--textColor) !important
+
+  .theme-code-group__nav-tab-active
+    border-color: var(--accentColor) !important
 
 // custom-block
 .custom-block.tip

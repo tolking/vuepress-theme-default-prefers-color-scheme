@@ -23,10 +23,7 @@ npm i vuepress-theme-default-prefers-color-scheme
 ``` js
 // .vuepress -> config.js
 module.exports = {
-  theme: 'default-prefers-color-scheme',
-  themeConfig: {
-    // ...
-  }
+  theme: 'default-prefers-color-scheme'
 }
 ```
 
@@ -36,7 +33,7 @@ module.exports = {
 - Type: `string`, `object`
 - Required: `false`
 
-By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme). You can break it by set `defaultTheme`.
+**By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme). You can break it by set `defaultTheme`.**
 
 support `light`, `dark` or `{ theme: [begin hours, end hours] }`
 
