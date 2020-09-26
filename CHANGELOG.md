@@ -2,12 +2,18 @@
 
 [README](README.md) | [CHANGELOG](CHANGELOG.md)
 
+## 1.1.1
+
+- adjust color matching
+- fix the `code-group` and `code-block` styles on vuepress 1.6.0
+
 ## 1.1.0
 
 - remove `css-prefers-color-scheme`
 - refactor `defaultTheme`
 
 ```
+defaultTheme: null -> <html>
 defaultTheme: 'light' -> <html theme="light">
 defaultTheme: 'dark' -> <html theme="dark">
 ```
