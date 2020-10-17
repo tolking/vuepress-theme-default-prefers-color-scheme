@@ -4,6 +4,7 @@
 .editorconfig
 .eslintrc.js
 .prettierrc
+.github
 
 node_modules/
 test/

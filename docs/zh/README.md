@@ -66,17 +66,16 @@ module.exports = {
 ::: danger
 从 `v1.1.0` 以后设置 `defaultTheme` 不在需要增加postcss插件，建议移除相关内容。在不久的未来将会把 `package.json` 中的 `css-prefers-color-scheme` 移除
 
-~~postcss: {~~
-
-~~plugins: [~~
-
-~~**require('css-prefers-color-scheme/postcss'),**~~
-
-~~require('autoprefixer')~~
-
-~~]~~
-
-~~}~~
+``` js
+module.exports = {
+- postcss: {
+-   plugins: [
+-     require('css-prefers-color-scheme/postcss'),
+-     require('autoprefixer')
+-   ]
+- }
+}
+```
 :::
 
 其它配置与 [官方主题配置](https://vuepress.vuejs.org/theme/default-theme-config.html) 相同

@@ -66,17 +66,16 @@ module.exports = {
 ::: danger
 After `v1.1.0`, it is no longer necessary to add a postcss plugIn to set `defaulttheme`. It is recommended to remove the relevant content. In the near future, `css-prefers-color-scheme` will be remove from `package.json`
 
-~~postcss: {~~
-
-~~plugins: [~~
-
-~~**require('css-prefers-color-scheme/postcss'),**~~
-
-~~require('autoprefixer')~~
-
-~~]~~
-
-~~}~~
+``` js
+module.exports = {
+- postcss: {
+-   plugins: [
+-     require('css-prefers-color-scheme/postcss'),
+-     require('autoprefixer')
+-   ]
+- }
+}
+```
 :::
 
 [Theme Config](https://vuepress.vuejs.org/theme/default-theme-config.html)
