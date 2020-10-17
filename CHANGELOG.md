@@ -2,6 +2,10 @@
 
 [README](README.md) | [CHANGELOG](CHANGELOG.md)
 
+## 1.1.2
+
+- fix typo
+
 ## 1.1.1
 
 - adjust color matching
