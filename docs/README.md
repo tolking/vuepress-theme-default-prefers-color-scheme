@@ -40,31 +40,30 @@ module.exports = {
 
 ## Options
 
-### defaultTheme
-- Type: `string`, `object`
-- Required: `false`
+### overrideTheme (optional)
 
-::: warning
-By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme). You can break it by set `defaultTheme`.
-:::
+Force users into a specific theme, ignoring [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
-support `light`, `dark` or `{ theme: [begin hours, end hours] }`
+Allowed values:
 
-``` js {4,6,8}
+- `'light' | 'dark'`: Always use the given theme
+- `{ light: [beginHours: number, endHours: number], dark: [beginHours: number, endHours: number] }`: Control the time of the day when each theme is used 
+
+For example:
+
+``` js
 module.exports = {
   theme: 'default-prefers-color-scheme',
   themeConfig: {
-    defaultTheme: 'dark',
+    overrideTheme: 'dark',
     // or
-    defaultTheme: { dark: [18, 6] },
-    // or
-    defaultTheme: { light: [6, 18], dark: [18, 6] },
+    overrideTheme: { light: [6, 18], dark: [18, 6] },
   }
 }
 ```
 
 ::: danger
-After `v1.1.0`, it is no longer necessary to add a postcss plugIn to set `defaulttheme`. It is recommended to remove the relevant content. In the near future, `css-prefers-color-scheme` will be remove from `package.json`
+After `v1.1.0`, it is no longer necessary to add a postcss plugIn to set `overrideTheme`. It is recommended to remove the relevant content. In the near future, `css-prefers-color-scheme` will be remove from `package.json`
 
 ``` js
 module.exports = {
