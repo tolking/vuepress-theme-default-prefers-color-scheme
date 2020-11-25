@@ -47,7 +47,11 @@ module.exports = {
 
 ### prefersTheme (optional)
 
-- `'light' | 'dark'`: Use the given theme when the browser does not support prefers-color-scheme but supports CSS Variables
+Use the given theme when the browser does not support prefers-color-scheme but supports CSS Variables
+
+Allowed values:
+
+- `'light' | 'dark'`
 
 For example:
 
