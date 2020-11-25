@@ -30,7 +30,7 @@ Force users into a specific theme, ignoring [prefers-color-scheme](https://devel
 Allowed values:
 
 - `'light' | 'dark'`: Always use the given theme
-- `{ light: [beginHours: number, endHours: number], dark: [beginHours: number, endHours: number] }`: Control the time of the day when each theme is used 
+- `{ light: [beginHours: number, endHours: number], dark: [beginHours: number, endHours: number] }`: Control the time of the day when each theme is used
 
 For example:
 
@@ -41,6 +41,21 @@ module.exports = {
     overrideTheme: 'dark',
     // or
     overrideTheme: { light: [6, 18], dark: [18, 6] },
+  }
+}
+```
+
+### prefersTheme (optional)
+
+- `'light' | 'dark'`: Use the given theme when the browser does not support prefers-color-scheme but supports CSS Variables
+
+For example:
+
+``` js
+module.exports = {
+  theme: 'default-prefers-color-scheme',
+  themeConfig: {
+    prefersTheme: 'dark',
   }
 }
 ```

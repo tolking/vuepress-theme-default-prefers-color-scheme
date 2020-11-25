@@ -10,8 +10,13 @@ export default {
     ParentLayout
   },
   computed: {
-    overrideTheme() {
+    defaultTheme() {
       const _overrideTheme = this.$themeConfig.overrideTheme
+      const _prefersTheme = this.$themeConfig.prefersTheme
+      const _noPreference =
+        !window.matchMedia('(prefers-color-scheme: light)').matches &&
+        !window.matchMedia('(prefers-color-scheme: dark)').matches
+
       if (typeof _overrideTheme === 'object') {
         const hours = new Date().getHours()
         let _key = false
@@ -30,17 +35,23 @@ export default {
           }
         }
         return _key
+      } else if (typeof _overrideTheme === 'string') {
+        return _overrideTheme
+      } else if (_prefersTheme && _noPreference) {
+        return _prefersTheme
       } else {
-        return _overrideTheme || false
+        return false
       }
     }
   },
   beforeMount() {
-    if (this.overrideTheme) {
-      document.getElementsByTagName('html')[0].setAttribute('theme', this.overrideTheme)
+    if (this.defaultTheme) {
+      document.getElementsByTagName('html')[0].setAttribute('theme', this.defaultTheme)
     }
   }
 }
+
+
 </script>
 
 <style lang="stylus">
