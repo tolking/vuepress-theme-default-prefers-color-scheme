@@ -37,7 +37,8 @@ module.exports = {
           }
         },
         sidebar: [
-          '/'
+          '/',
+          '/migration'
         ]
       },
       '/zh/': {
@@ -52,7 +53,8 @@ module.exports = {
           }
         },
         sidebar: [
-          '/zh/'
+          '/zh/',
+          '/zh/migration'
         ]
       }
     }

@@ -47,7 +47,7 @@ Force users into a specific theme, ignoring [prefers-color-scheme](https://devel
 Allowed values:
 
 - `'light' | 'dark'`: Always use the given theme
-- `{ light: [beginHours: number, endHours: number], dark: [beginHours: number, endHours: number] }`: Control the time of the day when each theme is used 
+- `{ light: [beginHours: number, endHours: number], dark: [beginHours: number, endHours: number] }`: Control the time of the day when each theme is used
 
 For example:
 
@@ -62,20 +62,24 @@ module.exports = {
 }
 ```
 
-::: danger
-After `v1.1.0`, it is no longer necessary to add a postcss plugIn to set `overrideTheme`. It is recommended to remove the relevant content. In the near future, `css-prefers-color-scheme` will be remove from `package.json`
+### prefersTheme (optional)
+
+Use the given theme when the browser does not support prefers-color-scheme but supports CSS Variables
+
+Allowed values:
+
+- `'light' | 'dark'`
+
+For example:
 
 ``` js
 module.exports = {
-- postcss: {
--   plugins: [
--     require('css-prefers-color-scheme/postcss'),
--     require('autoprefixer')
--   ]
-- }
+  theme: 'default-prefers-color-scheme',
+  themeConfig: {
+    prefersTheme: 'dark',
+  }
 }
 ```
-:::
 
 [Theme Config](https://vuepress.vuejs.org/theme/default-theme-config.html)
 
