@@ -5,7 +5,7 @@
 [Migration for v1](https://tolking.github.io/vuepress-theme-default-prefers-color-scheme/migration.html)
 
 - rename `defaultTheme` to `overrideTheme` and clarify it overrules and ignores [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
-- add `prefersTheme` to specify the theme displayed when the browser does not support prefers-color-scheme
+- add `prefersTheme` to specify the theme when the browser does not support prefers-color-scheme
 - remove `css-prefers-color-scheme` from `package.json`
 
 ## 1.1.2
