@@ -40,43 +40,46 @@ module.exports = {
 
 ## 配置
 
-### defaultTheme
-- 类型: `string`, `object`
-- 可省略
+### overrideTheme (可选)
 
-::: warning
-默认情况下，要显示浅色或深色主题由 [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) 决定。 你可以通过设置 `defaultTheme` 指定显示的主题颜色，但会破坏主题颜色的自动切换。
-:::
+强迫用户进入特定主题，忽略 [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) 值
 
-支持 `light`, `dark` 或者 `{ theme: [begin hours, end hours] }`
+允许值:
 
-``` js {4,6,8}
+- `'light' | 'dark'`: 始终显示当前值
+- `{ light: [beginHours: number, endHours: number], dark: [beginHours: number, endHours: number] }`: 通过一天中的不同时间来控制显示的值
+
+例如:
+
+``` js
 module.exports = {
   theme: 'default-prefers-color-scheme',
   themeConfig: {
-    defaultTheme: 'dark',
+    overrideTheme: 'dark',
     // or
-    defaultTheme: { dark: [18, 6] },
-    // or
-    defaultTheme: { light: [6, 18], dark: [18, 6] },
+    overrideTheme: { light: [6, 18], dark: [18, 6] },
   }
 }
 ```
 
-::: danger
-从 `v1.1.0` 以后设置 `defaultTheme` 不在需要增加postcss插件，建议移除相关内容。在不久的未来将会把 `package.json` 中的 `css-prefers-color-scheme` 移除
+### prefersTheme (可选)
+
+指定浏览器在不支持 prefers-color-scheme 但支持 CSS Variables 时，显示的主题
+
+允许值:
+
+- `'light' | 'dark'`
+
+例如:
 
 ``` js
 module.exports = {
-- postcss: {
--   plugins: [
--     require('css-prefers-color-scheme/postcss'),
--     require('autoprefixer')
--   ]
-- }
+  theme: 'default-prefers-color-scheme',
+  themeConfig: {
+    prefersTheme: 'dark',
+  }
 }
 ```
-:::
 
 其它配置与 [官方主题配置](https://vuepress.vuejs.org/theme/default-theme-config.html) 相同
 
