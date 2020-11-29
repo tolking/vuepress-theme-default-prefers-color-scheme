@@ -1,14 +1,8 @@
 # vuepress-theme-default-prefers-color-scheme
 
-> add prefers-color-scheme for vuepress default theme
-
-[README](README.md) | [CHANGELOG](CHANGELOG.md)
-
-**This theme for Vuepress 1.x**
+This plugin adds support for *prefers-color-scheme* to the Vuepress 1.x default theme.
 
 [Live Demo and Documentation](https://tolking.github.io/vuepress-theme-default-prefers-color-scheme)
-
----
 
 ## Installation
 
@@ -29,23 +23,24 @@ module.exports = {
 
 ## Options
 
-### defaultTheme
-- Type: `string`, `object`
-- Required: `false`
+### overrideTheme (optional)
 
-**By default, light or dark themes are displayed by [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme). You can break it by set `defaultTheme`.**
+Force users into a specific theme, ignoring [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
-support `light`, `dark` or `{ theme: [begin hours, end hours] }`
+Allowed values:
+
+- `'light' | 'dark'`: Always use the given theme
+- `{ light: [beginHours: number, endHours: number], dark: [beginHours: number, endHours: number] }`: Control the time of the day when each theme is used 
+
+For example:
 
 ``` js
 module.exports = {
   theme: 'default-prefers-color-scheme',
   themeConfig: {
-    defaultTheme: 'dark',
+    overrideTheme: 'dark',
     // or
-    defaultTheme: { dark: [18, 6] },
-    // or
-    defaultTheme: { light: [6, 18], dark: [18, 6] },
+    overrideTheme: { light: [6, 18], dark: [18, 6] },
   }
 }
 ```
@@ -54,9 +49,16 @@ module.exports = {
 
 ## Styling
 
-To apply simple color overrides to the styling of the [default preset](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/styles/palette.styl), In your `.vuepress/styles/palette.styl` file. or set CSS Variables in your `.vuepress/styles/index.styl` file.
+Apply simple color overrides to the styling of the [default preset](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/styles/palette.styl)
+in your `.vuepress/styles/palette.styl` file.
+
+Alternatively, set CSS Variables in your `.vuepress/styles/index.styl` file.
 
 **`$accentColor` and `$accentDarkColor` are best changed together**
+
+## Changelog
+
+This project uses semantic versioning and tracks changes in [CHANGELOG](CHANGELOG.md)
 
 ## License
 

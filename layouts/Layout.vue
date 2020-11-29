@@ -10,13 +10,13 @@ export default {
     ParentLayout
   },
   computed: {
-    defaultTheme() {
-      const _defaultTheme = this.$themeConfig.defaultTheme
-      if (typeof _defaultTheme === 'object') {
+    overrideTheme() {
+      const _overrideTheme = this.$themeConfig.overrideTheme
+      if (typeof _overrideTheme === 'object') {
         const hours = new Date().getHours()
         let _key = false
-        for (const key in _defaultTheme) {
-          const value = _defaultTheme[key]
+        for (const key in _overrideTheme) {
+          const value = _overrideTheme[key]
           if (value[0] <= value[1]) {
             if (value[0] <= hours && hours < value[1]) {
               _key = key
@@ -31,13 +31,13 @@ export default {
         }
         return _key
       } else {
-        return _defaultTheme || false
+        return _overrideTheme || false
       }
     }
   },
   beforeMount() {
-    if (this.defaultTheme) {
-      document.getElementsByTagName('html')[0].setAttribute('theme', this.defaultTheme)
+    if (this.overrideTheme) {
+      document.getElementsByTagName('html')[0].setAttribute('theme', this.overrideTheme)
     }
   }
 }

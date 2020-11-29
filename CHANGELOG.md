@@ -1,6 +1,8 @@
-# Change Log
+# Changelog
 
-[README](README.md) | [CHANGELOG](CHANGELOG.md)
+## 2.0.0
+
+- rename `defaultTheme` to `overrideTheme` and clarify it overrules and ignores [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 
 ## 1.1.2
 
