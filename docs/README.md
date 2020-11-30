@@ -1,22 +1,24 @@
 ## Introduction
 
-vuepress-theme-default-prefers-color-scheme is a theme that adds `light` and `dark` themes to the [default theme](https://vuepress.vuejs.org/zh/theme/default-theme-config.html) of vuepress
+[`vuepress-theme-default-prefers-color-scheme`](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme) is a theme that adds `light` and `dark` themes to the [default theme](https://vuepress.vuejs.org/theme/default-theme-config.html) of `vuepress`.
 
-## How It Works
+## Requirements
 
-base on prefers-color-scheme and CSS Variables
+### How it works
 
-#### View Support Browsers
+Based on `prefers-color-scheme` and CSS Variables.
 
-- [prefers-color-scheme](https://www.caniuse.com/#search=prefers-color-scheme)
+### Supported browsers
+
+- [`prefers-color-scheme`](https://www.caniuse.com/#search=prefers-color-scheme)
 - [CSS Variables](https://www.caniuse.com/#search=CSS%20Variables)
 
-**`prefers-color-scheme` also needs your system support**
+**`prefers-color-scheme` also needs your system support.**
 
-- mac Mojave ^10.14
-- windows 10 ^1809
+- macOS Mojave `^10.14`
+- Windows 10 `^1809`
 
-**For unsupported browsers, the same style as the default theme will be displayed**
+**For unsupported browsers, the same style as the default theme will be displayed.**
 
 ## Installation
 
@@ -40,9 +42,9 @@ module.exports = {
 
 ## Options
 
-### overrideTheme (optional)
+### `overrideTheme` (optional)
 
-Force users into a specific theme, ignoring [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
+Force users into a specific theme, ignoring [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 
 Allowed values:
 
@@ -62,7 +64,7 @@ module.exports = {
 }
 ```
 
-### prefersTheme (optional)
+### `prefersTheme` (optional)
 
 Use the given theme when the browser does not support prefers-color-scheme but supports CSS Variables
 
@@ -85,6 +87,7 @@ module.exports = {
 
 ## Styling
 
-To apply simple color overrides to the styling of the [default preset](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/styles/palette.styl), In your `.vuepress/styles/palette.styl` file. or set CSS Variables in your `.vuepress/styles/index.styl` file.
+To apply simple color overrides to the styling of the [default preset](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/styles/palette.styl) in your `.vuepress/styles/palette.styl` file.
+Or set CSS Variables in your `.vuepress/styles/index.styl` file.
 
-**`$accentColor` and `$accentDarkColor` are best changed together**
+**`$accentColor` and `$accentDarkColor` are best changed together.**

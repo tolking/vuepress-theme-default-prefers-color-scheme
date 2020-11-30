@@ -1,6 +1,10 @@
+[![License](https://img.shields.io/github/license/tolking/vuepress-theme-default-prefers-color-scheme.svg?style=flat-square&logo=opensourceinitiative)](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/LICENSE)
+[![Latest tag via npm](https://img.shields.io/npm/v/vuepress-theme-default-prefers-color-scheme.svg?style=flat-square&logo=npm)](https://npmjs.com/package/vuepress-theme-default-prefers-color-scheme)
+[![Latest tag via GitHub](https://img.shields.io/github/v/tag/tolking/vuepress-theme-default-prefers-color-scheme.svg?sort=semver&style=flat-square&logo=github)](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/tags)
+
 # vuepress-theme-default-prefers-color-scheme
 
-This plugin adds support for *prefers-color-scheme* to the Vuepress 1.x default theme.
+This plugin adds support for *prefers-color-scheme* to the [Vuepress](https://vuepress.vuejs.org) 1.x default theme.
 
 [Live Demo and Documentation](https://tolking.github.io/vuepress-theme-default-prefers-color-scheme)
 
@@ -77,7 +81,7 @@ Alternatively, set CSS Variables in your `.vuepress/styles/index.styl` file.
 
 ## Changelog
 
-This project uses semantic versioning and tracks changes in [CHANGELOG](CHANGELOG.md)
+This project uses semantic versioning and tracks changes in [CHANGELOG](CHANGELOG.md).
 
 ## License
 
