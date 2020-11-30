@@ -2,6 +2,8 @@
 
 ## 2.0.0
 
+> Compare [`v1.1.2...v2.0.0`](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/compare/v1.1.2...v2.0.0)
+
 [Migration for v1](https://tolking.github.io/vuepress-theme-default-prefers-color-scheme/migration.html)
 
 - rename `defaultTheme` to `overrideTheme` and clarify it overrules and ignores [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
@@ -47,7 +49,7 @@ defaultTheme: 'dark' -> <html theme="dark">
 
 ## 1.0.5
 
-- fix styles on vuepress 1.3.0
+- fix styles on [`vuepress`](https://vuepress.vuejs.org) 1.3.0
 
 ## 1.0.4
 
@@ -55,7 +57,7 @@ defaultTheme: 'dark' -> <html theme="dark">
 
 ## 1.0.3
 
-- fix styles on vuepress 1.2.0
+- fix styles on [`vuepress`](https://vuepress.vuejs.org) 1.2.0
 
 ## 1.0.2
 
