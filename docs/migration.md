@@ -5,10 +5,10 @@ title: Migration
 ## Migration from v1
 
 ::: tip
-If and only if you have configured `defaultTheme` in the `v1` version, you need to know this
+If and only if you have configured a `defaultTheme` in the `v1` version, you need to know this.
 :::
 
-``` js
+``` diff
 module.exports = {
   theme: 'default-prefers-color-scheme',
   themeConfig: {
