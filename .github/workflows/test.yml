@@ -1,11 +1,11 @@
-name: build docs
+name: test
 
 on:
-  push:
+  pull_request:
     branches: [ master ]
 
 jobs:
-  build-and-deploy:
+  build-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,11 +18,3 @@ jobs:
         run: |
           npm install
           npm run build
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
-        with:
-          GITHUB_TOKEN: ${{ secrets.page }}
-          BRANCH: gh-pages
-          FOLDER: dist
-          CLEAN: true
