@@ -1,3 +1,7 @@
+:warning: This library is no longer maintained.
+
+It is recommended to use [VitePress](https://github.com/vuejs/vitepress) to build your document, as it supports dark mode by default.
+
 [![License](https://img.shields.io/github/license/tolking/vuepress-theme-default-prefers-color-scheme.svg?style=flat-square&logo=opensourceinitiative)](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/blob/master/LICENSE)
 [![Latest tag via npm](https://img.shields.io/npm/v/vuepress-theme-default-prefers-color-scheme.svg?style=flat-square&logo=npm)](https://npmjs.com/package/vuepress-theme-default-prefers-color-scheme)
 [![Latest tag via GitHub](https://img.shields.io/github/v/tag/tolking/vuepress-theme-default-prefers-color-scheme.svg?sort=semver&style=flat-square&logo=github)](https://github.com/tolking/vuepress-theme-default-prefers-color-scheme/tags)
